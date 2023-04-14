@@ -10,6 +10,7 @@ if(isset($_SESSION['user_id'])){
    $user_id = '';
 };
 
+<<<<<<< HEAD
 
 if(isset($_POST['add_to_cart'])){
 
@@ -39,6 +40,9 @@ if(isset($_POST['add_to_cart'])){
    }
 
 }
+=======
+include 'components/add_cart.php';
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
 
 ?>
 
@@ -50,7 +54,11 @@ if(isset($_POST['add_to_cart'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grammy's Bakeshop - Product View</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<<<<<<< HEAD
     <link rel="stylesheet" href="./assets/css/Grammys.css">
+=======
+    <link rel="stylesheet" href="./assets/Grammys.css">
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
 
 </head>
 
@@ -86,12 +94,15 @@ if(isset($_POST['add_to_cart'])){
             font-size: 25px;
             font-family: "Barlow", sans-serif;
             padding: 12px 30px;
+<<<<<<< HEAD
             background-color: #FFFFFF;
             cursor: pointer;
         }
         .add-to-cart:hover {
             background-color: #9112FF;
             color: #FFFFFF;
+=======
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
         }
         .buy-now {
             background-color: #9112FF;
@@ -100,6 +111,7 @@ if(isset($_POST['add_to_cart'])){
             font-size: 25px;
             font-family: "Barlow", sans-serif;
             padding: 12px 45px;
+<<<<<<< HEAD
             border: none;
         }
         .buy-now:hover {
@@ -144,6 +156,9 @@ if(isset($_POST['add_to_cart'])){
         }
         
 
+=======
+        }
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
     </style>
 
 <body>
@@ -153,6 +168,7 @@ if(isset($_POST['add_to_cart'])){
     <div>
         <div class="all-products-empty"></div>
         <?php
+<<<<<<< HEAD
             $pid = $_GET['pid'];
             $select_products = $link->prepare("SELECT * FROM products WHERE id = ?");
             $select_products->execute([$pid]);
@@ -184,6 +200,43 @@ if(isset($_POST['add_to_cart'])){
                             <button name="add_to_cart" class="buy-now">Buy Now</button>
                         </div>
                         <p class="productview-description"><?= $fetch_products['description']; ?></p>
+=======
+            if(isset($_GET['pid'])) {
+                $pid = $_GET['pid'];
+                $select_products = $link->prepare("SELECT * FROM products WHERE id = ?");
+                $select_products->bind_param("i", $pid);
+                $select_products->execute();
+                $select_products->store_result();
+                if($select_products->num_rows() > 0) {
+                    $select_products->bind_result($id, $name, $price, $fullsize, $thumbnail, $description, $category);
+                    while($select_products->fetch()) {
+        ?>
+            <form action="" method="POST">
+            <input type="hidden" name="id" value="<?= $pid; ?>">
+            <input type="hidden" name="name" value="<?= $name; ?>">
+            <input type="hidden" name="price" value="<?= $price; ?>">
+            <input type="hidden" name="description" value="<?= $description; ?>">
+            <input type="hidden" name="fullsize" value="<?= $fullsize; ?>">
+
+            <div class="productview">
+                <div class="page-indicator">
+                    <p><a href="shop.php">Shop</a> / Products / <strong><?= $name; ?></strong></p>
+                </div>
+                <div class="productview-container">
+                    <div>
+                        <img src="uploaded_fullsize/<?= $fullsize; ?>" alt="">
+                    </div>
+                    <div class="productview-details">
+                        <div class="productview-name-price">
+                            <h1 class="productview-name"><?= $name; ?></h1>
+                            <h2 class="productview-price"><span>$</span><?= $price; ?>.00</h2>
+                        </div>
+                        <div class="productview-btns">
+                            <a href="" class="add-to-cart">Add to Cart</a>
+                            <a href="" class="buy-now">Buy Now</a>
+                        </div>
+                        <p class="productview-description"><?= $description; ?></p>
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
                     </div>
                 </div>
             </form>
@@ -191,6 +244,13 @@ if(isset($_POST['add_to_cart'])){
         } else {
             echo '<p class="text-center">No products added yet!</p>';
         }
+<<<<<<< HEAD
+=======
+            $select_products->close();
+        } else {
+            echo '<p class="text-center">Product ID not specified!</p>';
+        }
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
         ?>
 
         </div>
@@ -198,8 +258,13 @@ if(isset($_POST['add_to_cart'])){
 
     <?php include 'components/footer.php'; ?>
 
+<<<<<<< HEAD
 <script src="./Scripts/Search.js"></script>
 
+=======
+<script src="../Scripts/Search.js"></script>
+<script src="./Scripts/Filter.js"></script>
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
 <script src="https://kit.fontawesome.com/80e0f4e3cb.js"></script>
 </body>
 </html>

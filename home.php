@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 include 'components/config.php';
@@ -13,6 +14,10 @@ if(isset($_SESSION['user_id'])){
 include 'components/add_cart.php';
 
 ?>
+=======
+
+
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
 
 
 <!DOCTYPE html>
@@ -23,7 +28,11 @@ include 'components/add_cart.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grammy's Bakeshop - Home</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<<<<<<< HEAD
     <link rel="stylesheet" href="./assets/css/Grammys.css">
+=======
+    <link rel="stylesheet" href="Grammys.css">
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
 </head>
 <body>
 
@@ -31,9 +40,15 @@ include 'components/add_cart.php';
 
     <section id="hero-section">
         <div class="container">
+<<<<<<< HEAD
             <div class="hero-details">
                 <h1 class="hero-heading">Indulge in our freshly baked goodies-straight from Grammy's oven!</h1>
                 <a class="shop-button" href="shop.php">Shop</a>
+=======
+            <div class="col-lg-8 hero-details">
+                <h1 class="hero-heading">Indulge in our freshly baked goodies-straight from Grammy's oven!</h1>
+                <a class="shop-button" href="#">Shop</a>
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
             </div>
         </div>
     </section>
@@ -49,7 +64,11 @@ include 'components/add_cart.php';
                         <h1>Vanilla Cupcakes</h1>
                         <h2>$12.00</h2>
                     </div>
+<<<<<<< HEAD
                     <a class="featured-btn" href="ProductView.php?pid=20">View product</a>
+=======
+                    <a class="featured-btn" href="">View product</a>
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
                 </div>
                 <div class="featured-item">
                     <div class="new">NEW</div>
@@ -58,7 +77,11 @@ include 'components/add_cart.php';
                         <h1>Blueberry Mini Pie</h1>
                         <h2>$5.00</h2>
                     </div>
+<<<<<<< HEAD
                     <a class="featured-btn" href="ProductView.php?pid=5">View product</a>
+=======
+                    <a class="featured-btn" href="">View product</a>
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
                 </div>
                 <div class="featured-item">
                     <div class="new">NEW</div>
@@ -67,7 +90,11 @@ include 'components/add_cart.php';
                         <h1>Candy Muffin</h1>
                         <h2>$4.00</h2>
                     </div>
+<<<<<<< HEAD
                     <a class="featured-btn" href="ProductView.php?pid=8">View product</a>
+=======
+                    <a class="featured-btn" href="">View product</a>
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
                 </div>
                 <div class="featured-item">
                     <div class="new">NEW</div>
@@ -76,14 +103,22 @@ include 'components/add_cart.php';
                         <h1>Strawberry Cream Puffs</h1>
                         <h2>$15.00</h2>
                     </div>
+<<<<<<< HEAD
                     <a class="featured-btn" href="ProductView.php?pid=17">View product</a>
+=======
+                    <a class="featured-btn" href="">View product</a>
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
                 </div>
             </div>
         </div>
     </section>
     <section class="shop-by-category-section">
         <div class="shop-by-category-container">
+<<<<<<< HEAD
             <h1 class="text-center shop-category-title">Shop by category</h1>
+=======
+            <h1 class="text-center">Shop by category</h1>
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
             <div class="shop-by-categories">
                 <a href="shop.php?category=Mini Pies">
                     <div class="category">
@@ -128,7 +163,14 @@ include 'components/add_cart.php';
     <?php include 'components/footer.php'; ?>
 
     <script src="./Scripts/Search.js"></script>
+<<<<<<< HEAD
     
     <script src="https://kit.fontawesome.com/80e0f4e3cb.js"></script>
+=======
+    <script src="./Scripts/Filter.js"></script>
+    <script src="https://kit.fontawesome.com/80e0f4e3cb.js"></script>
+    <script src="./Bootstrap/bootstrap.min.js"></script>
+    <script src="./Bootstrap/jquery.min.js"></script>
+>>>>>>> 0bcdd2d0c9b5d26c9214fa2a1b4447c68ce7f31d
 </body>
 </html>
