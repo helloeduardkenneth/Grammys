@@ -44,7 +44,7 @@
                             li[z].style.transform = "scale(1)";
                             // Use a setTimeout to show each child element after 500ms
                             setTimeout(()=>{
-                                li[z].style.display = "block";
+                                li[z].style.display = "flex";
                             }, 500);
                         }
                     }
@@ -76,7 +76,7 @@
         }
       
         // remove existing product items
-        const productItemsContainer = document.querySelector(".product-items");
+        const productItemsContainer = document.querySelector(".product-container");
         productItemsContainer.innerHTML = "";
       
         // append the sorted product items to the container

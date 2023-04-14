@@ -7,51 +7,56 @@
     <title>Grammy's Bakeshop - Home</title>
 
     <link rel="stylesheet" href="Grammys.css">
-    <link rel="stylesheet" href="./Bootstrap/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="grammys-logo">
-            <img class="logo" src="./assets/grammys-logo.png" alt="grammys-logo">
-        </div>
-        <div class="right">
-            <div class="search-container">
-                <form action="#">
-                    <input class="search-bar" id="search-input" type="text" placeholder="Search...">
+    <section class="header-section">
+        <div class="header">
+            <div class="grammys-logo">
+                <img class="logo" src="./assets/grammys-logo.png" alt="grammys-logo">
+            </div>
+            <div class="right">
+                <div class="search-container">
+                    <form action="#">
+                        <input class="search-bar" id="search-input" type="text" placeholder="Search...">
+                    </form>
                     <i class="fa fa-search" id="search-icon"></i>
-                </form>
-            </div>
-            <div class="login-or-cart">
-                <div class="login">
-                    <i class="fa fa-user"></i>
-                    <a href="./login.php"><h1 class="login-text">Login</h1></a>
                 </div>
-                <div class="cart">
-                    <i class="fa fa-cart-shopping"></i>
-                    <h1 class="cart-text">Cart</h1>
+                <div class="login-or-cart">
+                    <a href="./login.php">
+                        <div class="login">
+                            <i class="fa fa-user"></i>
+                            <h1 class="login-text">Login</h1>
+                        </div>
+                    </a>
+                    <div class="cart">
+                        <i class="fa fa-cart-shopping"></i>
+                        <h1 class="cart-text">Cart</h1>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="./ShopPage.html">Shop</a>
-              <a class="nav-link" href="#">About</a>
-              <a class="nav-link" href="#">Contact</a>
-            </div>
-          </div>
-        </div>
-    </nav>
+        <div class="wrapper">
+            <nav class="navbar">
+                <input type="checkbox" id="toggle" onclick="toggleChecker()">
+                <label for="toggle">
+                    <i class="material-icons">menu</i>
+                </label>
+                <div class="menu">
+                    <ul class="nav-item">
+                        <li><a href="./HomePage.html">Home</a></li>
+                        <li><a class="active" href="./ShopPage.html">Shop</a></li>
+                        <li><a href="./AboutPage.html">About</a></li>
+                        <li><a href="./ContactPage.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>          
+    </section>
     <section id="hero-section">
         <div class="container">
-            <div class="col-lg-8 hero-details">
+            <div class="hero-details">
                 <h1 class="hero-heading">Indulge in our freshly baked goodies-straight from Grammy's oven!</h1>
                 <a class="shop-button" href="#">Shop</a>
             </div>
@@ -59,7 +64,7 @@
     </section>
     <div class="all-products-empty"></div>
     <section class="featured-section">
-        <div class="container-fluid featured-container">
+        <div class="featured-container">
             <h1 class="text-center">Featured Products</h1>
             <div class="featured-items">
                 <div class="featured-item">
@@ -102,11 +107,11 @@
         </div>
     </section>
     <section class="shop-by-category-section">
-        <div class="container-fluid shop-by-category-container">
+        <div class="shop-by-category-container">
             <h1 class="text-center">Shop by category</h1>
             <div class="shop-by-categories">
                 <div class="category">
-                    <img src="./assets/ShopByCategory/mini-pies.png" alt="mini-pies">
+                    <img class="category-image"src="./assets/ShopByCategory/mini-pies.png" alt="mini-pies">
                     <h1 class="category-title">Mini Pies</h1>
                 </div>
                 <div class="category">
@@ -154,7 +159,7 @@
     </footer>
 
     <script src="./Scripts/Search.js"></script>
-    <script src="./Scripts/Filter.js"></script>
+    
     <script src="https://kit.fontawesome.com/80e0f4e3cb.js"></script>
     <script src="./Bootstrap/bootstrap.min.js"></script>
     <script src="./Bootstrap/jquery.min.js"></script>
